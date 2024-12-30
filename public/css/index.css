@@ -82,9 +82,7 @@ counter-reset: sidenote-counter;
 font-family: var(--font-family);
 color: var(--text-color);
 background-color: var(--background-color);
-}
-
-html {
+text-wrap: pretty;
 overflow-y: scroll;
 }
 
@@ -314,8 +312,9 @@ font-family: var(--font-family-serif);
 font-weight: 400;
 margin-top: 4rem;
 margin-bottom: 1.5rem;
-font-size: 5.2rem;
+font-size: 4rem;
 line-height: 1;
+text-wrap: balance;
 }
 
 h2 {
@@ -326,6 +325,7 @@ margin-top: 2.1rem;
 margin-bottom: 1.4rem;
 font-size: 2.2rem;
 line-height: 1;
+text-wrap: balance;
 }
 
 h3 {
@@ -336,6 +336,7 @@ font-size: 1.7rem;
 margin-top: 2rem;
 margin-bottom: 1.4rem;
 line-height: 1;
+text-wrap: balance;
 }
 
 hr {
