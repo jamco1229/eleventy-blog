@@ -10,6 +10,8 @@ numberOfLatestPostsToShow: 3
 
 <div class="header-wrap">
 <h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
+</div>
+
 
 {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 {% set postslistCounter = postsCount %}
@@ -20,7 +22,6 @@ numberOfLatestPostsToShow: 3
 <p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the archive</a>.</p>
 {% endif %}
 
-</div>
 
 {# List every content page in the project #}
 {#
