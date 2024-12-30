@@ -282,6 +282,7 @@ header {
 /* Nav */
 .nav {
 	display: flex;
+	align-items: baseline;
 	padding: 0;
 	margin: 0;
 	list-style: none;
@@ -391,7 +392,7 @@ h1 {
     font-weight: 400;
     margin-top: 4rem;
     margin-bottom: 1.5rem;
-    font-size: 3.2rem;
+    font-size: 5.2rem;
     line-height: 1;
 }
 
@@ -556,7 +557,7 @@ figure.fullwidth figcaption {
 a:link,
 a:visited {
     color: inherit;
-    text-underline-offset: 0.1em;
+    text-underline-offset: 0.2em;
     text-decoration-thickness: 0.05em;
 }
 
