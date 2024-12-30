@@ -149,22 +149,6 @@
 	--syntax-tab-size: 2;
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--color-gray-20: #e0e0e0;
-		--color-gray-50: #C0C0C0;
-		--color-gray-90: #dad8d8;
-
-		--background-color: var(--colour-paper);
-
-		--text-color: var(--colour-black);
-		--text-color-link: var(--colour-blue-400);
-		--text-color-link-active: var(--colour-blue-600);
-		--text-color-link-visited: var(--text-color-link-active);
-	}
-}
-
-
 /* Global stylesheet */
 * {
 	box-sizing: border-box;
@@ -240,10 +224,12 @@ main :first-child {
 header {
 	border-bottom: 1px dashed var(--color-gray-20);
 }
-header:after {
-	content: "";
-	display: table;
-	clear: both;
+
+.header-wrap{
+	display: flex;
+	align-items: center;
+	text-align: center;
+	width: min(1000px , (100% - 1rem));
 }
 
 .links-nextprev {
