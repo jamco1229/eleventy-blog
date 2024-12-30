@@ -4,18 +4,68 @@
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 }
 
+
+/* Flexoki Colours */
+:root {
+	--colour-black:       #100F0F;
+	--colour-paper:       #FFFCF0;
+  
+	--colour-950:         #1C1B1A;
+	--colour-900:         #282726;
+	--colour-850:         #343331;
+	--colour-800:         #403E3C;
+	--colour-700:         #575653;
+	--colour-600:         #6F6E69;
+	--colour-500:         #878580;
+	--colour-300:         #B7B5AC;
+	--colour-200:         #CECDC3;
+	--colour-150:         #DAD8CE;
+	--colour-100:         #E6E4D9;
+	--colour-50:          #F2F0E5;
+  
+	--colour-red-600:     #AF3029;
+	--colour-red-400:     #D14D41;
+  
+	--colour-orange-600:  #BC5215;
+	--colour-orange-400:  #DA702C;
+  
+	--colour-yellow-900:  #4D3A0B;
+	--colour-yellow-600:  #AD8301;
+	--colour-yellow-400:  #D0A215;
+	--colour-yellow-100:  #FCEEB8;
+  
+	--colour-green-600:   #66800B;
+	--colour-green-400:   #879A39;
+  
+	--colour-cyan-950:    #142625;
+	--colour-cyan-600:    #24837B;
+	--colour-cyan-400:    #3AA99F;
+	--colour-cyan-50:     #EBF2E7;
+  
+	--colour-blue-600:    #205EA6;
+	--colour-blue-400:    #4385BE;
+  
+	--colour-purple-600:  #5E409D;
+	--colour-purple-400:  #8B7EC8;
+  
+	--colour-magenta-600: #A02F6F;
+	--colour-magenta-400: #CE5D97;
+  }
+
+
+
 /* Theme colors */
 :root {
 	--color-gray-20: #e0e0e0;
 	--color-gray-50: #C0C0C0;
 	--color-gray-90: #333;
 
-	--background-color: #fff;
+	--background-color: var(--colour-black);
 
-	--text-color: var(--color-gray-90);
-	--text-color-link: #082840;
-	--text-color-link-active: #5f2b48;
-	--text-color-link-visited: #17050F;
+	--text-color: var(--colour-paper);
+	--text-color-link: var(--colour-blue-600);
+	--text-color-link-active: var(--colour-blue-400);
+	--text-color-link-visited: var(--text-color-link-active);
 
 	--syntax-tab-size: 2;
 }
@@ -26,12 +76,12 @@
 		--color-gray-50: #C0C0C0;
 		--color-gray-90: #dad8d8;
 
-		/* --text-color is assigned to --color-gray-_ above */
-		--text-color-link: #1493fb;
-		--text-color-link-active: #6969f7;
-		--text-color-link-visited: #a6a6f8;
+		--background-color: var(--colour-paper);
 
-		--background-color: #15202b;
+		--text-color: var(--colour-black);
+		--text-color-link: var(--colour-blue-400);
+		--text-color-link-active: var(--colour-blue-600);
+		--text-color-link-visited: var(--text-color-link-active);
 	}
 }
 
@@ -66,6 +116,45 @@ body {
 	white-space: nowrap;
 	width: 1px;
 }
+
+
+/* Heading 1 */
+h1 {
+    font-size: 2rem; /* 32px / 16px = 2rem */
+    line-height: 1.25; /* 40 / 32 = 1.25 */
+    font-weight: 600; /* Bold */
+}
+
+/* Heading 2 */
+h2 {
+    font-size: 1.5rem; /* 24px / 16px = 1.5rem */
+    line-height: 1.33; /* 32 / 24 = 1.33 */
+    font-weight: 500;
+}
+
+/* Heading 3 */
+h3 {
+    font-size: 1rem; /* 16px / 16px = 1rem */
+    line-height: 1.5; /* 24 / 16 = 1.5 */
+    font-weight: 600;
+}
+
+/* Paragraph */
+p {
+    font-size: 1rem; /* 16px / 16px = 1rem */
+    line-height: 1.5; /* 24 / 16 = 1.5 */
+    font-weight: 400; /* Regular */
+}
+
+/* Default Image Styling */
+img {
+    display: block; /* Removes bottom spacing from inline images */
+    max-width: 100%; /* Ensures image does not overflow its container */
+    height: auto; /* Maintains aspect ratio */
+    border: none; /* Removes any default border */
+    object-fit: cover; /* Ensures the image covers its box without distortion */
+}
+
 
 p:last-child {
 	margin-bottom: 0;
