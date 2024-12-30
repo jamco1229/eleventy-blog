@@ -1,9 +1,88 @@
-/* Defaults */
-:root {
-	--font-family: -apple-system, system-ui, sans-serif;
-	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+/* PPEditorialNew Regular */
+@font-face {
+    font-family: 'PPEditorialNew';
+    src: url('/public/fonts/PPEditorialNew-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
+/* PPEditorialNew Italic */
+@font-face {
+    font-family: 'PPEditorialNew';
+    src: url('/public/fonts/PPEditorialNew-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* PPEditorialNew Bold */
+@font-face {
+    font-family: 'PPEditorialNew';
+    src: url('/public/fonts/PPEditorialNew-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* PPEditorialNew Bold Italic */
+@font-face {
+    font-family: 'PPEditorialNew';
+    src: url('/public/fonts/PPEditorialNew-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* PPEditorialNew Heavy */
+@font-face {
+    font-family: 'PPEditorialNew';
+    src: url('/public/fonts/PPEditorialNew-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* PPEditorialNew Heavy Italic */
+@font-face {
+    font-family: 'PPEditorialNew';
+    src: url('/public/fonts/PPEditorialNew-HeavyItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+/* PPEditorialNew Thin */
+@font-face {
+    font-family: 'PPEditorialNew';
+    src: url('/public/fonts/PPEditorialNew-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* PPEditorialNew Thin Italic */
+@font-face {
+    font-family: 'PPEditorialNew';
+    src: url('/public/fonts/PPEditorialNew-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+}
+
+/* PPEditorialNew Ultralight */
+@font-face {
+    font-family: 'PPEditorialNew';
+    src: url('/public/fonts/PPEditorialNew-Ultralight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* PPEditorialNew Ultralight Italic */
+@font-face {
+    font-family: 'PPEditorialNew';
+    src: url('/public/fonts/PPEditorialNew-UltralightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+}
+/* Defaults */
+:root {
+	--font-family-mono: -apple-system, system-ui, sans-serif;
+	--font-family-serif: 'PPEditorialNew', Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
 
 /* Flexoki Colours */
 :root {
@@ -93,8 +172,11 @@
 
 html,
 body {
+	font-size: 14px;
 	padding: 0;
 	margin: 0 auto;
+	width: min(900px , (100% - 2rem));
+    counter-reset: sidenote-counter;
 	font-family: var(--font-family);
 	color: var(--text-color);
 	background-color: var(--background-color);
@@ -329,27 +411,8 @@ h2 + .header-anchor {
 }
 
 
-
-
-@charset "UTF-8";
-
-
-/* Tufte CSS styles */
-html {
-    font-size: 15px;
-}
-
-body {
-    width: 87.5%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 12.5%;
-    max-width: 1400px;
-    counter-reset: sidenote-counter;
-}
-
-
 h1 {
+	font-family: var(--font-family-serif);
     font-weight: 400;
     margin-top: 4rem;
     margin-bottom: 1.5rem;
@@ -358,6 +421,7 @@ h1 {
 }
 
 h2 {
+	font-family: var(--font-family-serif);
     font-style: italic;
     font-weight: 400;
     margin-top: 2.1rem;
@@ -367,6 +431,7 @@ h2 {
 }
 
 h3 {
+	font-family: var(--font-family-serif);
     font-style: italic;
     font-weight: 400;
     font-size: 1.7rem;
@@ -386,6 +451,7 @@ hr {
 }
 
 p.subtitle {
+	font-family: var(--font-family-serif);
     font-style: italic;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -395,7 +461,7 @@ p.subtitle {
 }
 
 .numeral {
-    font-family: et-book-roman-old-style;
+    font-family: var(--font-family-serif);
 }
 
 .danger {
@@ -657,11 +723,6 @@ label.margin-toggle:not(.sidenote-number) {
 }
 
 @media (max-width: 760px) {
-    body {
-        width: 84%;
-        padding-left: 8%;
-        padding-right: 8%;
-    }
 
     hr,
     section > p,
