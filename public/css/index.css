@@ -144,7 +144,7 @@ border-bottom: 1px var(--colour-800);
 }
 
 .header-wrap{
-margin-top: 6rem;
+margin-top: 6rem !important;
 margin-bottom: 3rem;
 display: flex;
 flex-direction: column;
